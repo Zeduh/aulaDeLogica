@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+       <meta charset="utf-8">
+   </head>
+   <body>
+       <h1>Lógica de Programação - Desafio Lógica 03</h1>
+   </body>
+   <script>
+        let numDaSorte, mensagem,contador
+        contador = 0
+
+        function sorteio(){
+            numDaSorte = parseInt(Math.random()*100)+1
+            return numDaSorte
+        }
+        
+        function palpite(n){
+            if (contador == 6){
+                mensagem = "Tentatvias esgotadas, não foi dessa vez!"
+            }else {
+                if(numDaSorte > n){
+                    mensagem = "Tente um numero maior"
+                }else if(numDaSorte < n){
+                    mensagem = "Tente um numero menor"
+                }else if (numDaSorte == n){
+                    mensagem = "Você ganhou!"
+                }
+            }
+            contador++
+            return mensagem
+        }
+
+
+   </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+   </head>
+   <body>
+       <h1>Lógica de Programação - Desafio Lógica 02</h1>
+   </body>
+   <script>
+        let d1,d2,sorteio1,sorteio2,resultado,mensagem,soma,contador
+
+        contador=0
+
+        function sorteio(){
+            sorteio1=parseInt(Math.random()*6)+1
+            sorteio2=parseInt(Math.random()*6)+1
+            d1 = sorteio1
+            d2= sorteio2
+            soma = d1+d2
+            soma % 2 === 0 ? mensagem="PAR" : mensagem="IMPAR"
+            mensagem == "PAR" ? contador++ :null
+            console.log(sorteio1 + " + " + sorteio2 + " = " + (soma) + " : " + mensagem + " - " + contador)
+        }
+
+        for(var i=0;i<6;i++){
+            sorteio()
+        }
+        contador >= 4 ? mensagem ="Você ganhou!" : mensagem="Não foi dessa vez"
+        console.log(mensagem)
+
+   </script>
+</html>

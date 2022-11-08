@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+   </head>
+   <body>
+       <h1>Lógica de Programação - Live 25/08</h1>
+   </body>
+   <script>
+        console.log("Tudo certo")
+
+        let numeroAleatorio = 0
+        let arrayNumeros = []
+        let total = 0
+
+        for(let cont=0;cont<5;cont++){
+            numeroAleatorio = parseInt(Math.random()*(401)+100) //Gera número aleatório entre 100 e 500
+            arrayNumeros.push(numeroAleatorio)
+            console.log(numeroAleatorio)
+            total = total + numeroAleatorio
+    
+            if(numeroAleatorio%10 === 0) console.log("Esse número é divisível por 10!")
+    
+            if(numeroAleatorio >= 150) {
+                console.log("Numero maior que 150!")
+            }else {
+                console.log("Que pena, número não chegou em 150")
+            }
+
+        }
+
+        console.log(arrayNumeros)
+        console.log(`A Soma dos números sorteados é ${total}`)
+        
+   </script>
+</html>

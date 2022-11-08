@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+   </head>
+   <body>
+       <h1>Lógica de Programação - Funções Geradoras</h1>
+   </body>
+   <script>
+        function * exemplo01(numero) {
+            yield numero //5
+            yield numero + 10 //15
+            yield numero + 5 //10
+            yield numero += 5 //10
+            
+        }
+        
+        let teste = exemplo01(5)
+        console.log(teste.next().value) //5
+            console.log(teste.next().value) //15
+                console.log(teste.next().value) //10
+                    console.log(teste.next()) //value: 10, done: false
+
+        function * idIncremento () {
+            let index = 0
+            while(true)
+            yield index++
+        }
+        let indexIncremento = idIncremento()
+        console.log(indexIncremento.next().value)
+
+        function * geradorExterno(numero) {
+            yield numero + 1
+            yield numero + 2
+            yield numero + 3
+        }
+
+        function * geradorPrincipal(numero){
+            yield numero
+            yield * geradorExterno(numero)
+            yield numero * 2
+        }
+
+        let gerador = geradorPrincipal(5)
+        console.log(gerador.next().value)
+            console.log(gerador.next().value)
+                console.log(gerador.next().value)
+                    console.log(gerador.next().value)
+                        console.log(gerador.next().value)
+   </script>
+</html>

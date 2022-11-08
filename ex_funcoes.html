@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+   </head>
+        <body>
+            <h1>Lógica de Programação - Funções</h1>
+        </body>
+        <script>
+            let x,y
+            x = 10
+            y = 10
+            
+            //funcões simples
+            function soma() {
+                console.log(`função soma: x + y = ${x+y}`)
+            }
+            soma()
+
+            function info() {
+                let mensagem, nome
+                mensagem="Back End"
+                // mensagem="Front End"
+
+                if(mensagem == "Front End") {
+                    nome = "José"
+                    let imprime =`Olá ${nome}, bem vindo ao treinamento de ${mensagem}`
+                    console.log(imprime)
+                }else if(mensagem == "Back End"){
+                    nome = "Eduardo"
+                    let imprime =`Olá ${nome}, bem vindo ao treinamento de ${mensagem}`
+                    console.log(imprime)
+                }
+            }
+            info()
+
+            //funções retorno
+            function saudacao() {
+                bemVindo=`Olá, vamos começar nossa aula?`
+                return bemVindo
+            }
+            function multiplica() {
+                return `x * y = ${x*y}`
+            }
+            console.log(saudacao())
+            console.log(multiplica())
+
+            //funções com parâmetros
+            function calculo(x,y) {
+                return `x / y = ${(x/y)}`
+            }
+            console.log(calculo(10,2))
+
+            function calculadora(op,x,y) {
+                switch(op){
+                    case 1:
+                        console.log(`Soma: ${x} + ${y} = ${(x+y)}`)
+                    break
+                    case 2:
+                        console.log(`Subtração: ${x} - ${y} = ${(x-y)}`)
+                    break
+                    case 3:
+                        console.log(`Multiplicação: ${x} * ${y} = ${(x*y)}`)
+                    break
+                    case 4:
+                        console.log(`Divisão: ${x} / ${y} = ${(x/y)}`)
+                    break
+                }
+            }
+            calculadora(1,10,10)
+            calculadora(2,10,10)
+            calculadora(3,10,10)
+            calculadora(4,10,10)
+
+            //funções encadeadas
+            function livraria(nome) {
+                console.log(`Nossa livraria se chama ${nome}`)
+                function autor(escritor) {
+                    console.log(`Convidamos a noite de autógrafos do escritor ${escritor}`)
+                }
+                return autor
+            }
+            livraria("Do Zé")("Alex Brehan")
+
+            function a(x){
+                console.log(`x: ${x}`)
+                function b(y){
+                    console.log(`x: ${x} - y: ${y}`)
+                    function c(z) {
+                        console.log(`x: ${x} - y: ${y} - z: ${z}`)
+                    }
+                    c(3)
+                }
+                b(2)
+            }
+            a(1)
+
+            </script>
+</html>

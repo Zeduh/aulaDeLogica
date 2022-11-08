@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+       <meta charset="utf-8">
+   </head>
+   <body>
+       <h1>Lógica de Programação - Objetos</h1>
+   </body>
+   <script>
+        let imovel={
+            tipo:["casa","apartamento","sala comercial"], //membro do objeto
+            construtora:"Geral do Bairro",
+            seguradora:"Super Seguro",
+            slogan:function(tipo){
+                console.log(`Venha conhecer ${this.tipo[tipo]} pronta entrega`)
+            },
+            beneficios:{
+                administracao:"Imobiliaria",
+                seguroResidencia:true,
+                localizacao:"Bairro Nobre"
+            }
+        }
+        console.log(typeof(imovel))
+        console.log(imovel.constructor)
+        console.log(imovel)
+        console.log(`Construtora: ${imovel.construtora}`)
+        console.log(`Seguradora: ${["seguradora"]}`)
+        console.log(`Tipo do imóvel: ${imovel.tipo[0]}`)
+        imovel.slogan()
+        console.log(imovel.beneficios)
+        if(imovel.beneficios.seguroResidencia){
+            console.log(`Este imovel possui seguro residência e se localiza em ${imovel.beneficios.localizacao}`)
+        }
+        console.log(imovel.beneficios.seguroResidencia)
+
+        console.log("Nossas opções:")
+        imovel.tipo.forEach(function(v,i){
+            console.log(`Opção ${i+1} - ${v}`)
+        })
+   </script>
+</html>

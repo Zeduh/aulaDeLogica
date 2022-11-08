@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Aula Lógica de Programação</title>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Variáveis</h1>
+    </body>
+    <script>
+        //alert('Hello World')
+        var mensagem
+        var n1 = 10
+        var n1 = 22
+        // let (n2=5) 
+        let n2 = 15
+        let a = 2
+        var b = 4
+        {
+            let a=10        //LET FICA DENTRO DO ESCOPO
+            var b=40        //VAR SAI DO ESCOPO
+            console.log(a)
+            console.log(b)
+        }
+        console.log(a)
+        console.log(b)
+        // let n2 = 20 NÃO POSSO ALTERAR VALOR DE VARIAVEL DECLARADA COMO LET
+        console.log(n1, n2)
+        const n3 = 30
+        // n3 = 22 NÃO POSSO ALTERAR O VALOR DE CONSTANTE
+        var n4 = '22'
+        console.log(n1 == n4) // == IGNORA OS TIPOS
+        console.log(n1 === n4) // === VERIFICA SE É ESTRIRAMENTE IGUAL
+        console.log(typeof(n1), typeof(n4)) // number string0
+        console.log(typeof(n4) == 'number') // false
+        console.log(mensagem) //undefined
+        console.log(mensagem == undefined) // true
+        console.log(typeof(mensagem)) // undefined
+        mensagem = 'Escreva um algoritmo'
+        console.log(mensagem)
+    </script>
+ </html>

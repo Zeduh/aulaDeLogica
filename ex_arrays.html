@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Aula Lógica de Programação</title>
+       <meta charset="utf-8">
+   </head>
+   <body>
+       <h1>Lógica de Programação - Arrays</h1>
+   </body>
+   <script>
+        let planetas=["Terra","Marte","Netuno","Mercúrio"]
+        let profissoes = new Array("Astrounauta","Professor","Engenheiro","Arquiteto")
+        console.log(typeof(planetas))
+        console.log(planetas.constructor)
+        console.log(planetas)
+        console.log(`Length: ${planetas.length}`)
+        console.log(planetas[1])
+        
+        planetas.forEach(function(v,i){
+            console.log(`Planeta ${i+1}: ${v}`)
+        })
+        console.log(profissoes)
+        profissoes.forEach(function(v,i){
+            console.log(`Profissão ${i+1}: ${v}`)
+        })
+
+        let livros=[
+            ["Harry Potter","JK"],["O Senhor dos Aneis","Tolkien"],["Narnia","Desc"]
+        ]
+        console.log(livros)
+        console.log(livros[1][0])
+
+        livros.forEach(function(v,i){
+            console.log(`título ${i+1}: ${v[0]}, Editora: ${v[1]}`)
+        })
+        
+
+   </script>
+</html>
